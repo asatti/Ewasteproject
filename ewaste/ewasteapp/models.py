@@ -32,6 +32,7 @@ class Item(models.Model):
 		max_length = 20,
 		choices = WEIGHT_CHOICES,
 		default = "1-10"
+	)
 	OBJECT_TYPE_CHOICES = (
 		("battery", "battery"),
 		("none" , "none"),
@@ -45,6 +46,7 @@ class Item(models.Model):
 	is_delivered = models.BooleanField(default=False)
 class Driver(models.Model): #look up
 	email = models.EmailField(_('email address'), unique=True)
+	first_name = models.CharField(max_length=150, blank=True)
 	last_name = models.CharField(max_length=150, blank=True)
 	start_date = models.DateTimeField(default=timezone.now)
 	address = models.CharField(max_length=300, unique=True) #change "char field"
@@ -53,5 +55,6 @@ class Driver(models.Model): #look up
 	@property
 	def user_name(self):
 		return self.first_name + " " + self.last_name
+
 	start_time = models.DateTimeField()
 	end_time = models.DateTimeField()
