@@ -18,5 +18,5 @@ from django.urls import path
 from ewasteapp.views import home_page
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/' , home_page)
+    path('index/' , ewasteapp.views.HomeView.as_view())
 ]
