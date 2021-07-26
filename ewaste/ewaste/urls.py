@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from ewasteapp.views import home_page
+
 urlpatterns = [
+    path('ewasteapp/', include('ewasteapp.urls')),
     path('admin/', admin.site.urls),
-    path('ewasteapp/', include('ewasteapp.urls'))
+    
 ]
