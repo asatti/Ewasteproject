@@ -6,5 +6,9 @@ from django.views import generic
 # Create your views here.
 #def home_page(request):
     #return HttpResponse(index.html)
-class IndexView(generic.ListView):
-    template_name = 'ewasteapp/index.html'
+from django.views.generic.base import TemplateView
+
+
+class HomeView(TemplateView):
+
+    template_name = 'index.html'
