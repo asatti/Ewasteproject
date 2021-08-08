@@ -22,6 +22,7 @@ urlpatterns = [
     path('pickup/', views.ItemPickupView.as_view(), name = 'pickup'),
     path('postpickup/', views.postpickup, name = 'postpickup'),
     path('login/', views.login, name = 'login'),
+    path('signup/', views.login, name = 'signup'),
     path('admin/', admin.site.urls),
     
 ]
