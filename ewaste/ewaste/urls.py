@@ -18,7 +18,8 @@ from django.urls import path
 from ewasteapp import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
-    path('', views.home_page),
+    path('', views.home_page, name = 'home'),
+    path('pickup/', views.ItemPickupView.as_view(), name = 'pickup'),
     path('admin/', admin.site.urls),
     
 ]
