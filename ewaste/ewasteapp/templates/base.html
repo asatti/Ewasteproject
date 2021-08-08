@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
+            .logo{
+                
+                
+                
+                width: 226.4px; 
+                height: 76.2px;
+            }
+            .title{
+                
+                
+                text-align: right;
+                
+                
+                font-family: Ovo;
+                font-style: normal;
+                font-weight: normal;
+                
+                
+        
+                color: white;
+            }
+            nav{
+                
+                
+                height: 124.45px;
+                
+                top: 0px;
+            }
+            .pickup{
+                
+                width: 150px;
+                
+                text-align: right;
+                top: 30px;
+        
+                font-family: Ovo;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 36px;
+                line-height: 72px;
+        
+                
+        
+            }
+        </style>
+    </head>
+    <body>
+        <!-- header code -->
+        <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-dark bg-dark ">
+            <ul class="navbar-nav mx-auto" >
+                <li >
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    {% load static %} <img class="logo" src= "{% static "images/ersDesign.png" %}" alt=""  >
+                    
+                </a>
+                <p>
+                    <tex† class="title"  >Electronics Recycling Service <span class="sr-only">(current)</span></text>
+                </p>
+               
+            </li>
+            </ul>
+            <ul class="navbar-nav " >
+                
+                <li class="nav-item">
+                  
+                    <a class="nav-link pickup"  href="{% url 'pickup' %}">Pickup</a>
+                    
+                  </li>
+                
+              
+        
+            </ul>
+            <ul class="navbar-nav" >
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link pickup" href="">Log-In</a>
+                </li>
+                
+              
+        
+            </ul>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            
+            
+              
+          </div>
+        </nav>
+        {% block content %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        {% endblock %}
+        <!-- footer code -->
+    </body>
+<html>
