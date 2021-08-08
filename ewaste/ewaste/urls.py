@@ -20,6 +20,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('', views.home_page, name = 'home'),
     path('pickup/', views.ItemPickupView.as_view(), name = 'pickup'),
+    path('postpickup/', views.postpickup, name = 'postpickup'),
+    path('login/', views.login, name = 'login'),
     path('admin/', admin.site.urls),
     
 ]
