@@ -24,7 +24,3 @@ def login(request):
 
 def signup(request):
     return render(request, 'signup.html',)
-def load_items(request):
-    
-    items = Item.objects.filter().order_by('name')
-    return render(request, 'user/item_dropdown_list_options.html', {'items': items})
