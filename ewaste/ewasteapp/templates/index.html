@@ -1,78 +1,20 @@
-<!Doctype Html>  
-<Html>
+{% extends "base.html" %}
 <!-- CSS only -->
- 
 <Head>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
-        .logo{
-            
-            
-            top: 19px;
-            width: 226.4px; 
-            height: 76.2px;
-        }
-        .title{
-            
-            width: 874.31px;
-            height: 61px;
-            text-align: right;
-            top: 21px;
-            
-            font-family: Ovo;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 56px;
-            line-height: 72px;
-
-            color: #000000;
-        }
-        nav{
-            
-            
-            height: 124.45px;
-            
-            top: 0px;
-        }
-        .pickup{
-            
-            width: 224.85px;
-            height: 56px;
-            text-align: right;
-            top: 30px;
-
-            font-family: Ovo;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 36px;
-            line-height: 72px;
-
-            color: #FFFFFF;
-
-        }
-    </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
 <!-- JavaScript Bundle with Popper -->
-<Title>     
+
+<Title>
+    
+      
 </Title>  
 </Head>  
 <Body>
 <!-- temp[late inheritance] /-->
-<h1>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #719FE3;">
-        <!-- <div class="container-fluid"> -->
-        
-        <a class="navbar-brand" href="#">
-            {% load static %} <img class="logo" src= "{% static "images/ersDesign.png" %}" alt=""  >
-            
-        </a>
-        <h1  class = "title">Electronics Recycling Service</h1>
-        <p  class = "pickup" >Pickup</p>
-        <p  class = "pickup" >Log-In</p>
     
-        <!-- </div> /-->
-    </nav>
-</h1>
+
+{% block content %}
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>     
    <h1 style = "text-align:center;">About Us</h1>
    <hr>
@@ -81,5 +23,5 @@
        which would go to a dump instead and pollute our atmosphere. The world has limited resources and it is important for everyone to play a part.
        By participating in our goal, you can also make a positive impact on our world.
    </p>
-</Body>   
-</Html> 
+   {% endblock %}
+</Body>
