@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 <Body>
-{% block content %}
+  {% block content %}
 <div class="mb-3 row">
-    <label for="Welcome Back!" class="col-sm-2 col-form-label">Welcome Back!</label>
+    <label for="title" class="col-sm-2 col-form-label">Welcome Back</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="title" value="Title">
+    </div>
   </div>
   <div class="mb-3 row">
     <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
@@ -10,5 +13,5 @@
       <input type="password" class="form-control" id="inputPassword">
     </div>
   </div>
-    {% endblock %}
+{% endblock %}
 </Body>
