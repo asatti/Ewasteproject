@@ -22,6 +22,8 @@ def postpickup(request):
 def login(request):
     return render(request, 'login.html',)
 
+def signup(request):
+    return render(request, 'signup.html',)
 def load_items(request):
     
     items = Item.objects.filter().order_by('name')
