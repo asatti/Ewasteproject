@@ -16,23 +16,6 @@ class CustomUser(AbstractUser):
 		return self.first_name + " " + self.last_name
 	
 class Item(models.Model):
-	WEIGHT_CHOICES = (
-		("1-10", "1lbs - 10lbs"),
-		("11-20", "11lbs - 20lbs"),
-		("21-30","21lbs - 30lbs") ,#add pounds
-		("31-40","31lbs - 40lbs"),
-		("41-50","41lbs - 50lbs"),
-		("51-60","51lbs - 60lbs"),
-		("61-70","61lbs - 70lbs"),
-		("71-80","71lbs - 80lbs"),
-		("81-90","81lbs - 90lbs"),
-		("91-100","91lbs - 100lbs")
-	)
-	estimated_weight_in_pounds = models.CharField(
-		max_length = 20,
-		choices = WEIGHT_CHOICES,
-		default = "1-10"
-	)
 	OBJECT_TYPE_CHOICES = (
 		("battery", "battery"),
 		("none" , "none"),
