@@ -17,5 +17,5 @@ def pickup(request):
     return render(request, 'pickup.html',)
 def load_items(request):
     
-    branches = Item.objects.filter().order_by('name')
-    return render(request, 'user/branch_dropdown_list_options.html', {'branches': branches})
+    items = Item.objects.filter().order_by('name')
+    return render(request, 'user/item_dropdown_list_options.html', {'items': items})
