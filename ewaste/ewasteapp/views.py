@@ -24,3 +24,6 @@ def login(request):
 
 def signup(request):
     return render(request, 'signup.html',)
+
+def driverlogin(request):
+    return render(request, 'driverlogin.html')
