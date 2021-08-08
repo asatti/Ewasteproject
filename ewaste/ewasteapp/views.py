@@ -15,6 +15,13 @@ class ItemPickupView(generic.ListView):
     success_url = 'success.html'
 def pickup(request):
     return render(request, 'pickup.html',)
+
+def postpickup(request):
+    return render(request, 'postpickup.html',)
+
+def login(request):
+    return render(request, 'login.html',)
+
 def load_items(request):
     
     items = Item.objects.filter().order_by('name')
