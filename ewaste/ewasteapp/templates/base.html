@@ -53,7 +53,7 @@
     <body>
         <!-- header code -->
         <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-dark bg-dark ">
-            <ul class="navbar-nav mx-auto" >
+            <ul class="navbar-nav " >
                 <li >
                     
                 <a class="navbar-brand" href="{% url 'home' %}">
@@ -66,39 +66,23 @@
                
             </li>
             </ul>
-            <ul class="navbar-nav " >
+            <ul class="navbar-nav  " >
                 
                 <li class="nav-item">
                   
                     <a class="nav-link pickup"  href="{% url 'pickup' %}">Pickup</a>
                     
                   </li>
-                
-              
-        
-            </ul>
-            <ul class="navbar-nav" >
-                
-                
-                <li class="nav-item">
+                  <li class="nav-item">
                     <a class="nav-link pickup" href="{% url 'login' %}"> Customer Log-In</a>
                 </li>
-      
-            <ul class="navbar-nav" >
-                
-                
                 <li class="nav-item">
                     <a class="nav-link pickup" href="{% url 'driverlogin' %}"> Driver Log-In</a>
-                </li>    
-                
+                </li>   
               
         
             </ul>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
             
-            
-              
-          </div>
         </nav>
         {% block content %}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
