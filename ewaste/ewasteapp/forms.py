@@ -4,6 +4,6 @@ from django import forms
 class objectTypeForm(ModelForm):
     class Meta:
         model = Item
-        fields = ('object_type')
+        fields = ['object_type']
 
 

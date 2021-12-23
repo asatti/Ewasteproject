@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
-from django.views import CreateView
+from django.views.generic.edit import CreateView
 
-from ewasteapp.forms import MyModelForm, objectTypeForm
+from ewasteapp.forms import  objectTypeForm
 from .models import Item
 # Create your views here.
 def home_page(request):
