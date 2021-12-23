@@ -1,18 +1,18 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
-from django.views import generic
+from django.views import CreateView
 
-from ewasteapp.forms import MyModelForm
+from ewasteapp.forms import MyModelForm, objectTypeForm
 from .models import Item
 # Create your views here.
 def home_page(request):
     return render(request, "index.html")
-class ItemPickupView(generic.ListView):
+class ItemPickupView(CreateView):
     model = Item
-    form_class = MyModelForm
+    form_class = objectTypeForm
     template_name = 'pickup.html'
-    success_url = 'success.html'
+    success_url = 'pickup.html'
 def pickup(request):
     return render(request, 'pickup.html',)
 
