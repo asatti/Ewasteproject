@@ -1,11 +1,9 @@
 from django.forms import ModelForm
 from .models import Item
 from django import forms
-class MyModelForm(forms.Form):
+class objectTypeForm(ModelForm):
     class Meta:
         model = Item
-        fields = ('item')
+        fields = ('object_type')
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['item'].queryset = Item.objects.none()
+
