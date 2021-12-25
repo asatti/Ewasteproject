@@ -9,10 +9,16 @@
     
     
     {% block content %}
-    <form action="" method="post">{% csrf_token %}
+    <div class="form-group"></div>
+    
+
+    <form class="form-select d-inline-block" action="" method="post">{% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Create" />
     </form>
+    
+</div>
+    </Body>
        <!-- <div style = "margin-right: 20rem; margin-left: 20rem">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>     
        <h1 style = "text-align:center;">Select Your Items</h1>

@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 <Body>
 {% block content %}
-
-  <form>
+<form class="form-select d-inline-block" action="" method="post">{% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Create" />
+</form>
+  <!--<form>
     
     <div class="mb-3 row">
         <label for="inputEmail" class="col-sm-2 col-form-label">Email address:</label>
@@ -25,5 +28,6 @@
     </div>
   </div>
 </form>
+-->
 {% endblock %}
 </Body>
