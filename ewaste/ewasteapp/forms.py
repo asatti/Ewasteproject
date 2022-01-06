@@ -8,10 +8,6 @@ class objectTypeForm(ModelForm):
         model = Item
         fields = ['object_type']
 
-class SignUpForm(ModelForm):
-    class Meta:
-        model = CustomUser
-        fields = ('email', 'first_name', 'last_name', 'address')
 
 
 
