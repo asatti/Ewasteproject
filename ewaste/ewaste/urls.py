@@ -21,8 +21,9 @@ urlpatterns = [
     path('', views.home_page, name = 'home'),
     path('pickup/', views.ItemPickupView.as_view(), name = 'pickup'),
     path('postpickup/', views.postpickup, name = 'postpickup'),
-    path('login/', views.login, name = 'login'),
+    path('login/', views.user_login, name = 'login'),
     path('signup/', views.signup, name = 'signup'),
+    path('signout/', views.signout, name = 'signout'),
     path('admin/', admin.site.urls),
     path('driverlogin/', views.driverlogin, name = 'driverlogin')
     

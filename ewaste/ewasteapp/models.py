@@ -4,7 +4,7 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import AbstractUser, PermissionsMixin, BaseUserManager
 #user manager
-
+"""""
 class CustomUserManager(BaseUserManager):
 	def create_superuser(self, email, user_name,password, **other_fields):
 
@@ -34,21 +34,23 @@ class CustomUserManager(BaseUserManager):
 		user = self.model(email=email, user_name=user_name,
 							first_name=first_name, last_name = last_name, address = address)
 		user.set_password(password)
+		user.is_active = True
 		user.save()
 		return user
 class CustomUser(AbstractUser, PermissionsMixin):
 	email = models.EmailField(_('email address'))
-	user_name = models.CharField(max_length=150, blank=True)
+	user_name = models.CharField(max_length=150, blank=True, unique=True)
 	first_name = models.CharField(max_length=150, blank=True)
 	last_name = models.CharField(max_length=150, blank=True)
 	start_date = models.DateTimeField(default=timezone.now)
 	address = models.CharField(max_length=300) 
-	is_active = models.BooleanField(default=False)
+	is_active = models.BooleanField(default=True)
 	objects = CustomUserManager()
 
 	
-	REQUIRED_FIELDS = ['user_name']
-	
+	USERNAME_FIELD = 'user_name'
+	REQUIRED_FIELDS = ['email']
+"""
 class Item(models.Model):
 	OBJECT_TYPE_CHOICES = (
 		("battery", "battery"),
