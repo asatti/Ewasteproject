@@ -55,7 +55,7 @@ def signup(request):
         
         if User.objects.filter(email=email).exists():
             messages.error(request, "Email Already Registered!!")
-            
+            return redirect('signup')
         
         if len(username)>20:
             messages.error(request, "Username must be under 20 charcters!!")
